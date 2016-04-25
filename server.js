@@ -51,6 +51,6 @@ MongoClient.connect(url, function (err, db) {
   }
 });
 
-http.listen(1337, function() {
-  console.log('cool stuff on: 1337');
+http.listen(7777, function() {
+  console.log('cool stuff on: 7777');
 });

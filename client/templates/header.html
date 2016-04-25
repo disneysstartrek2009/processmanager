@@ -1,20 +1,16 @@
 <div class="top-bar style2">
     <div class="logo">
-        <a href="#/" title=""><i class="fa fa-btc"></i> FightCoin</a>
+        <a href="#/" title=""><i class="fa fa-terminal"></i> ProcessManager</a>
     </div>
+    <form class="search-form">
+        <input type="text" placeholder="Search Here..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
     <ul>
-        <li><a title="" href="#/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-        <li><a title=""><i class="fa fa-play"></i>Play</a></li>
-        <li><a title=""><i class="fa fa-barcode"></i>Wallet</a></li>
-        <li><a title=""><i class="fa fa-gamepad"></i>Game History</a></li>
+        <li><a title=""><i class="fa fa-plus"></i>New Tasks</a></li>
+        <li><a title=""><i class="fa fa-cloud-upload"></i>Upload Files</a></li>
     </ul>
-    <div class="quick-links">
-        <ul>
-            <li><a title="" class="show-stats red-skin"><i class="fa fa-cog"></i></a></li>
-        </ul>
-    </div>
-</div><!-- Top Bar -->
-
+</div>
 <script type="text/javascript">
     $(document).ready(function(){
     
@@ -48,6 +44,23 @@
       $(".quick-links > ul > li > a, .dialouge").on("click",function(e){
             e.stopPropagation();
         });
+      
+      //***** Toggle Full Screen *****//
+      function goFullScreen() {
+        var
+            el = document.documentElement
+          , rfs =
+                 el.requestFullScreen
+              || el.webkitRequestFullScreen
+              || el.mozRequestFullScreen
+              || el.msRequestFullscreen
+
+      ;
+      rfs.call(el);
+      }
+      $("#toolFullScreen").on("click",function() {
+          goFullScreen();
+      });
 
       $(".data-attributes span").peity("donut");
 });
