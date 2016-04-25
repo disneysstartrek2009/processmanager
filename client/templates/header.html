@@ -1,0 +1,74 @@
+<div class="top-bar style2">
+    <div class="logo">
+        <a href="#/" title=""><i class="fa fa-btc"></i> FightCoin</a>
+    </div>
+    <ul>
+        <li><a title="" href="#/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li><a title=""><i class="fa fa-play"></i>Play</a></li>
+        <li><a title=""><i class="fa fa-barcode"></i>Wallet</a></li>
+        <li><a title=""><i class="fa fa-gamepad"></i>Game History</a></li>
+    </ul>
+    <div class="quick-links">
+        <ul>
+            <li><a title="" class="show-stats red-skin"><i class="fa fa-cog"></i></a></li>
+        </ul>
+    </div>
+</div><!-- Top Bar -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    
+    "use strict";
+
+    //***** Quick Stats *****//
+    $('.open-hide-menu').on("click", function(){
+        $(".horizontal-menu > nav").slideToggle('active');
+    });
+
+      //***** Quick Stats *****//
+      $('.show-stats').on("click", function(){
+        $(".toggle-content").addClass('active');
+      });
+     
+       //***** Quick Stats *****//
+      $('.toggle-content > span').on("click", function(){
+        $(".toggle-content").removeClass('active');
+      });
+
+      //***** Quick Stats *****//
+      $('.quick-links > ul > li > a').on("click", function(){
+        $(this).parent().siblings().find('.dialouge').fadeOut();
+        $(this).next('.dialouge').fadeIn();
+        return false;
+      });
+
+      $("html").on("click", function(){
+        $(".dialouge").fadeOut();
+      });
+      $(".quick-links > ul > li > a, .dialouge").on("click",function(e){
+            e.stopPropagation();
+        });
+
+      $(".data-attributes span").peity("donut");
+});
+</script>
+<script type="text/javascript">
+    $( window ).load(function() {
+        
+        if ($(window).width() < 1200) {
+            $(".horizontal-menu").on("click",function(e){
+            e.stopPropagation();
+            });
+            $(".horizontal-menu  ul  li.menu-item-has-children > a").on("click",function(){
+                $(this).parent().siblings().children("ul").slideUp();
+                $(this).parent().siblings().removeClass("active");
+                $(this).parent().children("ul").slideToggle();
+                $(this).parent().toggleClass("active");
+                return false;
+            });
+        }
+
+    });
+
+
+</script>

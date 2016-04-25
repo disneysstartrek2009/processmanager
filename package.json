@@ -1,0 +1,13 @@
+{
+  "name": "fightcoin",
+  "version": "0.0.1",
+  "description": "crypto coin fight club",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.16",
+    "mongoose": "^4.4.12",
+    "path": "^0.12.7",
+    "socket.io": "^1.4.5"
+  }
+}
